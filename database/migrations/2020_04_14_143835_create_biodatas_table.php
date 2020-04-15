@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSurveysTable extends Migration
+class CreateBiodatasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateSurveysTable extends Migration
      */
     public function up()
     {
-        Schema::create('surveys', function (Blueprint $table) {
+        Schema::create('biodatas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->biginteger('user_id');
-            $table->integer('yes');
-            $table->integer('no');
+            $table->string('name');
+            $table->string('jk');
+            $table->string('umur');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateSurveysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('surveys');
+        Schema::dropIfExists('biodatas');
     }
 }

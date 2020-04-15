@@ -11,15 +11,19 @@
 |
 */
 
-Route::get('/survey', function () {
-    return view('survey');
+Route::get('/melihat', function () {
+    return view('melihat');
 });
 
 Route::get('/', function () {
-    return view('login');
+    return view('dashboard');
 });
 
 Auth::routes();
 
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/biodata', 'BiodataController@index')->name('biodata');
+Route::post('/biodata/create', 'BiodataController@create')->name('biodata.create');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('survey','SurveyController');
+Route::resource('melihat','MelihatController');

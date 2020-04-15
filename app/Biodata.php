@@ -4,9 +4,9 @@ namespace App;
   
 use Illuminate\Database\Eloquent\Model;
    
-class Survey extends Model
+class Biodata extends Model
 {
     protected $fillable = [
-        'user_id','yes','no'
+    	'name','jk','umur'
     ];
 }

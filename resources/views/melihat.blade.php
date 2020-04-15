@@ -4,13 +4,12 @@
 <div class="row justify-content-center">
 <div class="col-md-8">
     <div class="card shadow-sm border-0">
-        <div class="card-header">Survey</div>
+        <div class="card-header">Mlihat</div>
 
         <div class="card-body">
             <div class="table-responsive">
-            <form action="{{url('survey.store')}}" method="POST">
+            <form action="{{url('melihat.store')}}" method="POST">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-               <input type="hidden" name="id" value="{{Auth::user()->id}}"> 
                 <table class="table table-bordered table-hover" id="datatables">
                     <thead>
                         <tr>
